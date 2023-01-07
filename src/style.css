@@ -1,0 +1,1396 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Inika";
+  src: url("./fonts/Inika/Inika-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inika Bold";
+  src: url("./fonts/Inika/Inika-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: bold;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/Inter/Inter-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter Bold";
+  src: url("./fonts/Inter/Inter-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: bold;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.body {
+  width: 100%;
+  height: 100vh;
+}
+
+.body::-webkit-scrollbar {
+  width: 20px;
+}
+
+.body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.body::-webkit-scrollbar-thumb {
+  background: linear-gradient(#d6e7d2, #499a18);
+  outline: 1px solid linear-gradient(#d6e7d2, #499a18);
+  border-radius: 20px;
+}
+
+.header {
+  width: 100%;
+  background-color: #edf2ec;
+}
+
+.header_wrapper {
+  width: 1222px;
+  height: 117px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 67px;
+  height: 20px;
+  font-family: "Inika";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #010201;
+  user-select: none;
+  transition: all 0.4s ease-in-out;
+  text-decoration: none;
+}
+.logo .logo_icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("./icons/logo_vector.svg");
+  transition: all 0.4 ease-in-out;
+}
+.logo:hover {
+  cursor: pointer;
+  color: #e06733;
+}
+.logo:hover > .logo_icon {
+  background-image: url("./icons/logo_vector_hover.svg");
+}
+
+.nav {
+  width: 443px;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+.nav_item {
+  list-style: none;
+}
+.nav_item:hover {
+  cursor: pointer;
+}
+
+.nav_item_link {
+  font-family: "Inika";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 50px;
+  user-select: none;
+  color: #010201;
+  user-select: none;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+.nav_item_link:hover {
+  text-decoration: none;
+  color: #e06733;
+}
+.nav_item_link:visited {
+  text-decoration: none;
+}
+.nav_item_link.active {
+  color: #e06733;
+}
+
+.burger {
+  display: none;
+}
+
+.welcome {
+  width: 100%;
+  background-color: #edf2ec;
+}
+
+.welcome_wrapper {
+  width: 1222px;
+  height: 549px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.plants {
+  display: inline-block;
+  width: 450px;
+  height: 408px;
+  background-image: url("./1440/leafs.png");
+  margin-top: 33px;
+}
+
+.welcome_content {
+  width: 537px;
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 83px;
+}
+
+.welcome_title {
+  font-family: "Inter Bold";
+  font-style: bold;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 50px;
+  color: #717171;
+  margin-bottom: 42px;
+  user-select: none;
+}
+
+.welcome_info {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 35px;
+  color: #636060;
+  margin-bottom: 48px;
+  user-select: none;
+}
+
+.text_green {
+  color: #499a18;
+}
+
+.welcome_button {
+  width: 152px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  border: 2px solid #e06733;
+  border-radius: 10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: #010201;
+  text-align: center;
+  user-select: none;
+  transition: all 0.4s ease-in-out;
+}
+.welcome_button:hover {
+  cursor: pointer;
+  background-color: #e06733;
+  color: #ffffff;
+}
+
+.about {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.about_wrapper {
+  width: 1222px;
+  height: 666px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.about_content {
+  width: 595px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 163px;
+}
+
+.about_title {
+  width: 421px;
+  height: 102px;
+  font-family: "Inika";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 52px;
+  color: #499a18;
+  margin-top: 150px;
+  margin-bottom: 40px;
+  user-select: none;
+}
+
+.text_orange {
+  color: #e06733;
+}
+
+.about_info {
+  height: 208px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #636060;
+  user-select: none;
+}
+
+.about_plant {
+  display: inline-block;
+  width: 464px;
+  height: 479px;
+  margin-top: 82px;
+  background-image: url("./1440/houseplant 1.png");
+}
+
+.service {
+  width: 100%;
+  background-color: #edf2ec;
+}
+
+.service_wrapper {
+  width: 1222px;
+  height: 1300px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.service_nav {
+  width: 1005px;
+  height: 94px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 35px;
+}
+
+.service_title {
+  width: 306px;
+  height: 94px;
+  font-family: "Inika";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 52px;
+  color: #499a18;
+  margin-right: 140px;
+  user-select: none;
+}
+
+.service_menu {
+  width: 559px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.service_button {
+  font-family: "Inika";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: #e06733;
+  border: 1px solid #e06733;
+  border-radius: 5px;
+  padding: 12px 40px 12px 40px;
+  text-align: center;
+  user-select: none;
+  transition: all 0.4s ease-in-out;
+}
+.service_button:hover {
+  cursor: pointer;
+  background-color: #e06733;
+  color: #ffffff;
+}
+
+.service_cards {
+  position: relative;
+  height: 955px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  margin-top: 97px;
+}
+
+.card {
+  width: 330px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #e3e1d5;
+  border-radius: 20px;
+  transition: all 0.4s ease-in-out;
+}
+.card:hover {
+  cursor: pointer;
+  border: 1px solid #499a18;
+}
+
+.card_image {
+  width: 330px;
+  height: 350px;
+  display: inline-block;
+}
+.card_image.one {
+  background-image: url("./1440/first.png");
+}
+.card_image.two {
+  background-image: url("./1440/first (1).png");
+}
+.card_image.three {
+  background-image: url("./1440/first (2).png");
+}
+.card_image.four {
+  background-image: url("./1440/first (3).png");
+}
+.card_image.five {
+  background-image: url("./1440/first (4).png");
+}
+.card_image.six {
+  background-image: url("./1440/first (5).png");
+}
+
+.card_title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: #e06733;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  user-select: none;
+}
+
+.card_info {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #717171;
+  user-select: none;
+}
+
+.prices {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.prices_wrapper {
+  width: 1222px;
+  height: 568px;
+  background-color: #ffffff;
+  display: flex;
+  margin: 0 auto;
+}
+
+.prices_left {
+  width: 332px;
+  height: 391px;
+  margin-right: 438px;
+  margin-top: 45px;
+}
+
+.prices_title {
+  font-family: "Inter Bold";
+  font-style: bold;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: #010201;
+  user-select: none;
+}
+
+.prices_options {
+  width: 332px;
+  height: 283px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 60px;
+  user-select: none;
+  border: 1px solid #e3e1d5;
+  border-radius: 20px;
+}
+
+.option {
+  width: 250px;
+  height: 50px;
+  list-style: none;
+  user-select: none;
+  background-color: #edf2ec;
+  border-radius: 20px;
+  font-family: "Inter Bold";
+  font-style: bold;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 50px;
+  color: #010201;
+  padding-left: 40px;
+  padding-right: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.circle {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease-in-out;
+}
+.circle:hover {
+  cursor: pointer;
+  background-color: #aea1a1;
+}
+.circle:hover .arrow_dropdown {
+  background-color: #ffffff;
+  transform: rotate(180deg);
+}
+.circle .arrow_dropdown {
+  width: 4px;
+  height: 1px;
+  display: inline-block;
+  background-color: #717171;
+}
+.circle .arrow_dropdown.left {
+  transform: rotate(45deg) translate(1px, 0px);
+}
+.circle .arrow_dropdown.right {
+  transform: rotate(-45deg) translate(-1px, 0px);
+}
+
+.prices_right {
+  width: 452px;
+  height: 517px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 40px;
+  user-select: none;
+}
+
+.prices_info {
+  height: 110px;
+  font-family: "Inter Bold";
+  font-style: bold;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  text-align: right;
+  color: #010201;
+  margin-bottom: 31px;
+  user-select: none;
+}
+
+.prices_button {
+  width: 162px;
+  padding: 12px 30px 12px 32px;
+  border: 1px solid #e06733;
+  border-radius: 5px;
+  font-family: "Inika Bold";
+  font-style: bold;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  color: #e06733;
+  margin-bottom: 7px;
+  user-select: none;
+  transition: all 0.4s ease-in-out;
+}
+.prices_button:hover {
+  cursor: pointer;
+  background-color: #e06733;
+  color: #ffffff;
+}
+
+.prices_image {
+  width: 284px;
+  height: 319px;
+  background-image: url("./768/leafs (1).png");
+}
+
+.contacts {
+  width: 100%;
+  background-color: #edf2ec;
+}
+
+.contacts_wrapper {
+  width: 1222px;
+  height: 542px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts_title {
+  font-family: "Inika";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  color: #499a18;
+  padding-top: 60px;
+  text-align: center;
+  user-select: none;
+}
+
+.pic_city {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts_pic {
+  width: 400px;
+  height: 497px;
+  background-image: url("./1440/contact_woman 1.png");
+  transform: translateY(-68px);
+}
+
+.city_choice {
+  width: 450px;
+  height: 50px;
+  background-color: #d6e7d2;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  margin-top: 37px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 35px 0 35px;
+}
+
+.city {
+  width: 204px;
+  height: 40px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: 0.05em;
+  color: #636060;
+  user-select: none;
+}
+
+.circle_city {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease-in-out;
+}
+.circle_city:hover {
+  cursor: pointer;
+  background-color: #aea1a1;
+}
+.circle_city:hover .arrow_dropdown_city {
+  background-color: #ffffff;
+  transform: rotate(180deg);
+}
+.circle_city .arrow_dropdown_city {
+  width: 4px;
+  height: 1px;
+  display: inline-block;
+  background-color: #717171;
+}
+.circle_city .arrow_dropdown_city.left {
+  transform: rotate(45deg) translate(1px, 0px);
+}
+.circle_city .arrow_dropdown_city.right {
+  transform: rotate(-45deg) translate(-1px, 0px);
+}
+
+.footer {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.footer_wrapper {
+  width: 1222px;
+  height: 132px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.footer_left {
+  width: 170px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  background-image: url("./icons/©.svg");
+  background-repeat: no-repeat;
+  user-select: none;
+}
+
+.year {
+  width: 49px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 50px;
+  color: #010201;
+  user-select: none;
+}
+
+.github {
+  width: 61px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 50px;
+  color: #010201;
+  user-select: none;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+}
+.github:hover {
+  cursor: pointer;
+  color: #e06733;
+}
+
+.rsschool {
+  width: 211px;
+  height: 50px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 50px;
+  color: #010201;
+  user-select: none;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+}
+.rsschool:hover {
+  cursor: pointer;
+  color: #e06733;
+}
+
+.media_icons {
+  width: 188px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.media {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  user-select: none;
+  text-decoration: none;
+  transition: all 0.4 ease-in-out;
+}
+.media.instagram {
+  background-image: url("./icons/inst 1.svg");
+}
+.media.instagram:hover {
+  background-image: url("./icons/inst_hover.svg");
+}
+.media.facebook {
+  background-image: url("./icons/fb 1.svg");
+}
+.media.facebook:hover {
+  background-image: url("./icons/fb_hover.svg");
+}
+.media.twitter {
+  background-image: url("./icons/tw 1.svg");
+}
+.media.twitter:hover {
+  background-image: url("./icons/tw_hover.svg");
+}
+.media.pinterest {
+  background-image: url("./icons/pinterest 1.svg");
+}
+.media.pinterest:hover {
+  background-image: url("./icons/pinterest_hover.svg");
+}
+.media:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439.9px) {
+  .header_wrapper {
+    width: 668px;
+    height: 117px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .welcome_wrapper {
+    width: 668px;
+    height: 453px;
+    flex-direction: row-reverse;
+  }
+
+  .plants {
+    display: inline-block;
+    width: 284px;
+    height: 319px;
+    background-image: url("./768/leafs (1).png");
+    margin-top: 40px;
+  }
+
+  .welcome_content {
+    width: 341px;
+    height: 317px;
+    margin-top: 40px;
+  }
+
+  .welcome_title {
+    font-family: "Inter Bold";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 50px;
+    margin-bottom: 33px;
+  }
+
+  .welcome_info {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 33px;
+  }
+
+  .about_wrapper {
+    width: 668px;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .about_content {
+    width: 668px;
+    margin-right: 0;
+    margin-top: 40px;
+    align-items: center;
+    margin-right: 0;
+  }
+
+  .about_title {
+    width: 421px;
+    height: 102px;
+    font-size: 35x;
+    margin-top: 0;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .about_info {
+    height: 208px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #636060;
+    user-select: none;
+  }
+
+  .about_plant {
+    width: 250px;
+    height: 258px;
+    margin-top: 40px;
+    background-image: url("./768/houseplant 1.png");
+  }
+
+  .service_wrapper {
+    width: 668px;
+    height: 1780px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .service_nav {
+    width: 668px;
+    height: 184px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 60px;
+  }
+
+  .service_title {
+    width: 306px;
+    height: 94px;
+    font-size: 35px;
+    line-height: 45px;
+    margin-right: 0;
+    margin-top: 0;
+  }
+
+  .service_menu {
+    width: 559px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 40px;
+  }
+
+  .service_button {
+    font-family: "Inika";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #e06733;
+    border: 1px solid #e06733;
+    border-radius: 5px;
+    padding: 12px 40px 12px 40px;
+    text-align: center;
+    user-select: none;
+    transition: all 0.2s ease-in-out;
+  }
+  .service_button:hover {
+    cursor: pointer;
+    background-color: #e06733;
+    color: #ffffff;
+  }
+
+  .service_cards {
+    position: relative;
+    height: 1426px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    margin-top: 40px;
+  }
+
+  .card {
+    width: 281px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #e3e1d5;
+    border-radius: 20px;
+  }
+  .card:hover {
+    cursor: pointer;
+  }
+
+  .card_image {
+    width: 280px;
+    height: 350px;
+  }
+  .card_image.one {
+    background-image: url("./768/first (6).png");
+  }
+  .card_image.two {
+    background-image: url("./768/first (7).png");
+  }
+  .card_image.three {
+    background-image: url("./768/first (8).png");
+  }
+  .card_image.four {
+    background-image: url("./768/first (9).png");
+  }
+  .card_image.five {
+    background-image: url("./768/first (10).png");
+  }
+  .card_image.six {
+    background-image: url("./768/first (11).png");
+  }
+
+  .card_info {
+    width: 213px;
+    height: 40px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #717171;
+    user-select: none;
+  }
+
+  .prices_wrapper {
+    width: 668px;
+    height: 585px;
+  }
+
+  .prices_left {
+    width: 332px;
+    height: 386px;
+    margin-right: 40px;
+    margin-top: 40px;
+  }
+
+  .prices_title {
+    font-size: 35px;
+    line-height: 42px;
+  }
+
+  .prices_options {
+    margin-top: 55px;
+  }
+
+  .prices_right {
+    width: 296px;
+    height: 368px;
+    margin-top: 144px;
+  }
+
+  .prices_info {
+    height: 78px;
+    font-size: 26px;
+    line-height: 35px;
+    margin-bottom: 22px;
+  }
+
+  .prices_button {
+    margin-bottom: 44px;
+  }
+
+  .prices_image {
+    width: 152px;
+    height: 175px;
+    background-image: url("./768/prices_leaves.png");
+  }
+
+  .contacts_wrapper {
+    width: 668px;
+    height: 739px;
+    align-items: center;
+  }
+
+  .contacts_title {
+    padding-top: 40px;
+  }
+
+  .pic_city {
+    width: 450px;
+    height: 550px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+  }
+
+  .contacts_pic {
+    width: 200px;
+    height: 250px;
+    background-image: url("./768/contact_woman 1 (1).png");
+    transform: translateY(0px);
+  }
+
+  .city_choice {
+    width: 450px;
+    height: 50px;
+    background-color: #d6e7d2;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer_wrapper {
+    width: 668px;
+    height: 181px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer_left {
+    padding-top: 28px;
+  }
+}
+@media screen and (min-width: 380px) and (max-width: 767.9px) {
+  .header_wrapper {
+    width: 330px;
+    height: 96px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .burger {
+    width: 40px;
+    height: 27px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .burger:hover {
+    cursor: pointer;
+    transform: rotate(90deg);
+  }
+
+  .burger_line {
+    display: inline-block;
+    width: 40px;
+    height: 2px;
+    background-color: #636060;
+  }
+
+  .welcome_wrapper {
+    width: 330px;
+    height: 296px;
+  }
+
+  .plants {
+    display: none;
+  }
+
+  .welcome_content {
+    width: 341px;
+    height: 317px;
+    margin-top: 9px;
+  }
+
+  .welcome_title {
+    width: 330px;
+    height: 70px;
+    font-family: "Inter Bold";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 35px;
+    margin-bottom: 23px;
+  }
+
+  .welcome_info {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 23px;
+  }
+
+  .welcome_button {
+    width: 122px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .about_wrapper {
+    width: 330px;
+    height: 520px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about_content {
+    width: 330px;
+    height: 308px;
+    margin-top: 30px;
+    margin-right: 0;
+  }
+
+  .about_title {
+    width: 330px;
+    height: 58px;
+    font-size: 25px;
+    line-height: 33px;
+    margin-bottom: 22px;
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .about_info {
+    width: 330px;
+    height: 228px;
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  .about_plant {
+    display: inline-block;
+    width: 150px;
+    height: 147px;
+    margin: 0;
+    background-image: url("./380/houseplant 1.png");
+  }
+
+  .service_wrapper {
+    width: 330px;
+    height: 3150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .service_nav {
+    width: 252px;
+    height: 183px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+
+  .service_title {
+    width: 187px;
+    height: 69px;
+    font-size: 25px;
+    line-height: 33px;
+    margin-right: 0;
+    margin-top: 0;
+  }
+
+  .service_menu {
+    width: 252px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-right: 0;
+    gap: 9px;
+  }
+
+  .service_button {
+    width: 121px;
+    font-family: "Inika";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: #e06733;
+    border: 1px solid #e06733;
+    border-radius: 5px;
+    padding: 7px 0 7px 0;
+    text-align: center;
+    user-select: none;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .service_cards {
+    position: relative;
+    width: 330px;
+    height: 2870px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 42px;
+  }
+
+  .card {
+    width: 281px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #e3e1d5;
+    border-radius: 20px;
+  }
+  .card:hover {
+    cursor: pointer;
+  }
+
+  .card_image {
+    width: 280px;
+    height: 350px;
+  }
+  .card_image.one {
+    background-image: url("./768/first (6).png");
+  }
+  .card_image.two {
+    background-image: url("./768/first (7).png");
+  }
+  .card_image.three {
+    background-image: url("./768/first (8).png");
+  }
+  .card_image.four {
+    background-image: url("./768/first (9).png");
+  }
+  .card_image.five {
+    background-image: url("./768/first (10).png");
+  }
+  .card_image.six {
+    background-image: url("./768/first (11).png");
+  }
+
+  .card_info {
+    width: 213px;
+    height: 40px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #717171;
+    user-select: none;
+  }
+
+  .prices_wrapper {
+    width: 330px;
+    height: 512px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .prices_left {
+    width: 224px;
+    height: 304px;
+    margin-right: 0;
+    margin-top: 25px;
+  }
+
+  .prices_title {
+    width: 224px;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .prices_options {
+    width: 224px;
+    height: 235px;
+    margin-top: 42px;
+  }
+
+  .option {
+    width: 180px;
+    height: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .prices_right {
+    width: 230px;
+    height: 126px;
+    margin-top: 15px;
+    align-items: center;
+  }
+
+  .prices_info {
+    height: 78px;
+    font-size: 20px;
+    line-height: 35px;
+    margin-bottom: 22px;
+    text-align: center;
+  }
+
+  .prices_button {
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 42px;
+    padding: 8px 22px 8px 22px;
+  }
+
+  .prices_image {
+    width: 152px;
+    height: 175px;
+    background-image: url("./768/prices_leaves.png");
+  }
+
+  .contacts_wrapper {
+    width: 330px;
+    height: 445px;
+  }
+
+  .contacts_title {
+    padding-top: 25px;
+    font-size: 25px;
+    line-height: 33px;
+  }
+
+  .pic_city {
+    width: 330px;
+    height: 302px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 84px;
+  }
+
+  .contacts_pic {
+    width: 100px;
+    height: 125px;
+    background-image: url("./380/contact_woman 1 (2).png");
+    transform: translateY(0px);
+  }
+
+  .city_choice {
+    width: 300px;
+    height: 50px;
+    margin-top: 0;
+  }
+
+  .footer_wrapper {
+    width: 330px;
+    height: 146px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer_left {
+    padding-top: 23px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
